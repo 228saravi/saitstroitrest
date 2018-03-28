@@ -11,7 +11,9 @@ body {
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
+.containerMain{
+  margin-top: 4rem;
+}
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;

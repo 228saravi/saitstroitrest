@@ -8,5 +8,12 @@ app.use('/', express.static(path.join(__dirname ,catalog)));
 app.get('/', function(req, res){    
     res.sendFile(path.join(__dirname, catalog, 'index.html'));
 });
+app.get(/([a-z]+)/, function(req, res){  
+    
+    res.sendFile(path.join(__dirname, catalog, req.url+'.html'),(err)=>{
+        console.log(err);
+        return 1;
+    });
+});
  
-app.listen(3000)
+app.listen(3000);
